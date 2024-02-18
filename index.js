@@ -8,7 +8,12 @@ const stripe = require("stripe")(
 
 
 const app = express()
-app.use(cors({origin:true}))
+app.use(
+    cors({
+      origin: true,
+      credentials: true,
+    })
+  );
 
 
 app.use(express.json())
